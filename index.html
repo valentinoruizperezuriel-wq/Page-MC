@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Minecraft | Inicio</title>
+    <style>
+        /* Variables de color estilo Minecraft */
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --mc-green: #3c8527;
+            --mc-green-hover: #47a12e;
+            --text-light: #f5f5f5;
+            --text-gray: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Barra de navegación */
+        header {
+            background-color: #000000;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--mc-green);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--mc-green);
+            text-shadow: 2px 2px #000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--mc-green);
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(18,18,18,1)), url('https://images.unsplash.com/photo-1607988795691-3d0147b43231?q=80&w=1200') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 3px 3px 0px #222;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            background-color: var(--mc-green);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            border-bottom: 4px solid #275618;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--mc-green-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            border-bottom-width: 0;
+        }
+
+        /* Contenedor General */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Sección de Características */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--mc-green);
+        }
+
+        .card h3 {
+            color: var(--mc-green);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Sección de Comandos Rápidos */
+        .commands-section {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--mc-green);
+        }
+
+        .commands-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .command-box {
+            background-color: #111;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffb703;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .command-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            background-color: #050505;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">■ MINECRAFT FAN ZONE</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#guias">Guías</a></li>
+                <li><a href="#comandos">Comandos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <section class="hero" id="inicio">
+        <h1>Explora, Construye y Sobrevive</h1>
+        <p>Tu rincón informativo sobre el universo de bloques. Descubre mecánicas técnicas, comandos avanzados y trucos para tus servidores.</p>
+        <a href="#comandos" class="btn">Ver Comandos Útiles</a>
+    </section>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+        
+        <!-- Bloques de Información -->
+        <section class="features" id="guias">
+            <div class="card">
+                <h3>Servidores Técnicos</h3>
+                <p>Configura tus propios entornos cooperativos o de supervivencia, gestiona las IPs esenciales y optimiza el rendimiento para jugar sin lag con tus amigos.</p>
+            </div>
+            <div class="card">
+                <h3>Mecánicas de Crafteo</h3>
+                <p>Desde los circuitos básicos de Redstone hasta las recetas de herramientas avanzadas. Todo lo necesario para dominar el modo supervivencia.</p>
+            </div>
+            <div class="card">
+                <h3>Estructuras y Bloques</h3>
+                <p>Encuentra las coordenadas perfectas de materiales valiosos como el lapis lazuli o los diamantes, y aprende a generar estructuras al instante.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Comandos Interactiva -->
+        <section class="commands-section" id="comandos">
+            <h2>Consola de Comandos Esenciales</h2>
+            <p>Guía rápida de comandos de utilidad para Bedrock y Java Edition en tus mundos creativos o de administrador:</p>
+            <br>
+
+            <p class="command-desc"><strong>1. Generar estructuras automáticamente:</strong></p>
+            <div class="command-box">
+                <span>/place structure [nombre_estructura] [coordenadas]</span>
+            </div>
+
+            <p class="command-desc"><strong>2. Cambiar al modo de juego creativo rápidamente:</strong></p>
+            <div class="command-box">
+                <span>/gamemode creative</span>
+            </div>
+
+            <p class="command-desc"><strong>3. Obtener un bloque de comandos (oculto en el inventario normal):</strong></p>
+            <div class="command-box">
+                <span>/give @p command_block</span>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Crafters Hub. Creado con fines informativos y de entretenimiento.</p>
+    </footer>
+
+</body>
+</html>
